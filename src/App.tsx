@@ -17,7 +17,8 @@ function App() {
   let setTasks = arr[1];
 
   function removeTask (id: number) {
-    tasks = tasks.filter(t => t.id !== id)
+    let filteredTasks = tasks.filter(t => t.id !== id)
+    setTasks(filteredTasks)
   }
 
   return (
