@@ -3,6 +3,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import { TodoList } from "./Todolist";
 
+
+export type FilterValuesType = "all" | "completed" | "active";
+
+
 function App() {
 
   // let [tasks, setTasks] = arr;
@@ -12,7 +16,9 @@ function App() {
     { id: 3, title: "React", isDone: false },
     { id: 4, title: "Redux", isDone: false },
   ]);
-  let [filtered, setFilter] = useState("all");
+  let [filtered, setFilter] = useState<FilterValuesType>("all");
+
+  
 
   function removeTask(id: number) {
     let filteredTasks = tasks.filter((t) => t.id !== id);
