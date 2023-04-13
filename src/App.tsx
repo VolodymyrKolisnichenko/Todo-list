@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Todolist } from "./Todolist";
+import { TodoList } from "./Todolist";
 
 function App() {
   let initTasks = [
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <Todolist title="What to learn" tasks={tasks} removeTask={removeTask}/>
+      <TodoList title="What to learn" tasks={tasks} removeTask={removeTask}/>
     </div>
   );
 }

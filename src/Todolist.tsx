@@ -12,7 +12,7 @@ type PropsType = {
     removeTask: Function
 }
 
-export function Todolist(props: PropsType) {
+export function TodoList(props: PropsType) {
    
     return <div>
       <h3>{props.title}</h3>
