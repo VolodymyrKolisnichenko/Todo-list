@@ -12,7 +12,7 @@ function App() {
     { id: 3, title: "React", isDone: false },
     { id: 4, title: "Redux", isDone: false },
   ]);
-  let [filtered, stFilter] = useState("completed");
+  let [filtered, setFilter] = useState("all");
 
   function removeTask(id: number) {
     let filteredTasks = tasks.filter((t) => t.id !== id);
@@ -32,7 +32,8 @@ function App() {
       <TodoList 
       title="What to learn" 
       tasks={taskForTodoList} 
-      removeTask={removeTask} />
+      removeTask={removeTask}
+      setFilter={setFilter} />
     </div>
   );
 }
