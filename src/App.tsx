@@ -13,8 +13,8 @@ function App() {
 
   let arr = useState(initTasks);
 
-  let tasks = arr[0];
-  let setTasks = arr[1];
+
+  let [tasks, setTasks] = arr;
 
   function removeTask (id: number) {
     let filteredTasks = tasks.filter(t => t.id !== id)
