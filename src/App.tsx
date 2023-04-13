@@ -11,10 +11,10 @@ function App() {
     {id: 4, title: "Redux", isDone: false},
   ]
 
-  let arr = useState(initTasks);
+  let [tasks, setTasks] = useState(initTasks);
+  // let [tasks, setTasks] = arr;
 
 
-  let [tasks, setTasks] = arr;
 
   function removeTask (id: number) {
     let filteredTasks = tasks.filter(t => t.id !== id)
