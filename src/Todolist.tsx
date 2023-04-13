@@ -1,9 +1,13 @@
 import React from "react";
 
+type PropsType = {
+    title: string;
+}
 
-function Todolist() {
+export function Todolist(props: PropsType) {
+    console.log(props)
     return <div>
-      <h3>What to learn</h3>
+      <h3>{props.title}</h3>
       <div>
         <input/>
         <button>+</button>
@@ -20,4 +24,3 @@ function Todolist() {
       </div>
       </div>;
   }
-  export default Todolist
