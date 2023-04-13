@@ -24,7 +24,8 @@ export function Todolist(props: PropsType) {
             return <li><input 
             type="checkbox" 
             checked={el.isDone} />
-            <span>{el.title}</span></li>
+            <span>{el.title}</span>
+            <button onClick={() => alert('alert')}>X</button></li>
             })}
       </ul>
    
