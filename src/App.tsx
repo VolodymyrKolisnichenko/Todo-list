@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { TodoList } from "./Todolist";
+import { TodoList } from "./TodoList";
+import { TaskType } from "./TodoList"
 
 
 export type FilterValuesType = "all" | "completed" | "active";
@@ -10,7 +10,7 @@ export type FilterValuesType = "all" | "completed" | "active";
 function App() {
 
   // let [tasks, setTasks] = arr;
-  let [tasks, setTasks] = useState([
+  let [tasks, setTasks] = useState <Array<TaskType>>([
     { id: 1, title: "CSS&HTML", isDone: true },
     { id: 2, title: "JS", isDone: true },
     { id: 3, title: "React", isDone: false },
