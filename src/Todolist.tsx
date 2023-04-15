@@ -10,7 +10,7 @@ type PropsType = {
     title: string;
     tasks: Array<TaskType>;
     removeTask: Function;
-    setFilter: Function
+    changeFilter: Function
 }
 
 export function TodoList(props: PropsType) {
@@ -32,9 +32,9 @@ export function TodoList(props: PropsType) {
       </ul>
    
       <div>
-      <button onClick={() => {props.setFilter('all')}}>All</button>
-      <button onClick={() => {props.setFilter('active')}}>Active</button>
-      <button onClick={() => {props.setFilter('completed')}}>Completed</button>
+      <button onClick={() => {props.changeFilter('all')}}>All</button>
+      <button onClick={() => {props.changeFilter('active')}}>Active</button>
+      <button onClick={() => {props.changeFilter('completed')}}>Completed</button>
       </div>
       </div>;
   }

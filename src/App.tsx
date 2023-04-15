@@ -18,7 +18,9 @@ function App() {
   ]);
   let [filtered, setFilter] = useState<FilterValuesType>("all");
 
-  
+  function changeFilter (value: FilterValuesType) {
+    setFilter(value)
+  }
 
   function removeTask(id: number) {
     let filteredTasks = tasks.filter((t) => t.id !== id);
@@ -39,7 +41,7 @@ function App() {
       title="What to learn" 
       tasks={taskForTodoList} 
       removeTask={removeTask}
-      setFilter={setFilter} />
+      changeFilter={changeFilter} />
     </div>
   );
 }
